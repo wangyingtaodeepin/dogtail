@@ -1140,7 +1140,7 @@ class Root (Node):
         """
         return root.findChildren(predicate.GenericPredicate(roleName="application"), recursive=False)
 
-    def application(self, appName, retry=True):
+    def application(self, appName, description='', retry=True):
         """
         Gets an application by name, returning an Application instance
         or raising an exception.
@@ -1149,7 +1149,7 @@ class Root (Node):
         if no such child is found, and will eventually raise an exception. It
         also logs the search.
         """
-        return root.findChild(predicate.IsAnApplicationNamed(appName), recursive=False, retry=retry)
+        return root.findChild(predicate.IsAnApplicationNamed(appName, description), recursive=False, retry=retry)
 
 
 class Application (Node):
