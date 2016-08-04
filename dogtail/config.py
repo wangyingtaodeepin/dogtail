@@ -134,7 +134,7 @@ class _Config(object):
         'searchBackoffDuration': 0.5,
         'searchWarningThreshold': 3,
         'searchCutoffCount': 20,
-        'defaultDelay': 0.5,
+        'defaultDelay': 0.1,
         'childrenLimit': 100,
 
         # Debug
