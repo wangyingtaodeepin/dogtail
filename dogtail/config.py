@@ -132,8 +132,8 @@ class _Config(object):
         'runInterval': 0.5,
         'runTimeout': 30,
         'searchBackoffDuration': 0.5,
-        'searchWarningThreshold': 3,
-        'searchCutoffCount': 20,
+        'searchWarningThreshold': 5,
+        'searchCutoffCount': 10,
         'defaultDelay': 0.1,
         'childrenLimit': 100,
 

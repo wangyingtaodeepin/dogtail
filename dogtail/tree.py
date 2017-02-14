@@ -873,7 +873,7 @@ class Node(object):
         else:
             return pyatspi.utils.findDescendant(self, pred)
 
-    def findChild(self, pred, recursive=True, debugName=None, retry=True, requireResult=True):
+    def findChild(self, pred, recursive=True, debugName=None, retry=True, requireResult=False):
         """
         Search for a node satisyfing the predicate, returning a Node.
 
@@ -922,6 +922,8 @@ class Node(object):
                 sleep(config.searchBackoffDuration)
         if requireResult:
             raise SearchError(describeSearch(self, pred, recursive, debugName))
+        else:
+            return None
 
     # The canonical "search for multiple" method:
     def findChildren(self, pred, recursive=True, isLambda=False):
