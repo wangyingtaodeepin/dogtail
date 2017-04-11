@@ -6,6 +6,7 @@ Makefile
 NEWS
 README
 dogtail.spec
+setup.cfg
 setup.py
 dogtail/__init__.py
 dogtail/config.py
